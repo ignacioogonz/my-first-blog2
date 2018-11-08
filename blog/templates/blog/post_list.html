@@ -1,0 +1,157 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+    <Head>
+        <meta charset="UFT-8">
+        <title>Pag</title>
+        <meta name ="viewport" content="width=device-width, user-scalable=no, initial-scalable=1.0 maximum-scalable=1,
+        0,minimun-scalable=1.0">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'flexboxgrid-6.3.1/flexboxgrid.min.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700|Nunito:400,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+        <script rel="stylesheet" src="{% static 'jquery-3.3.1.min.js' %}"></script>
+        <script rel="stylesheet" src="{% static 'jR3DCarousel.js' %}"></script>
+        <script rel="stylesheet" href="{% static 'script.css' %}"></script>
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+
+        
+    </Head>
+    <body>
+        <header id="header">
+            <nav class ="menu">
+                <div class="logo">
+                    <a href="#" ><img src="{% static 'img/logo.png'  %}" alt=""></a>
+                    <a href="#"class="btn-menu" id="btn-menu"><i class="icono fa fa-times" aria-hidden="true"></i></a> 
+                </div>
+
+
+                <div class="enlaces" id="enlaces">
+                    <a href="{% url 'mascota:index' %}"><i class="fa fa-home" aria-hidden="true"></i> inicio</a>
+                    <a href="{% url 'mascota:mascota_listar' %}"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lista</a>
+                    <a href="{% url 'mascota:mascota_crear' %}"><i class="fa fa-briefcase" aria-hidden="true"></i> Registrar</a>
+                    <a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> contactos</a>
+                    <a href="file:///C:/Users/Ignacioogonz/Desktop/Pagina%20web/Galeria%20de%20imagenes/Untitled-1.html"><i class="fa fa-picture-o" aria-hidden="true"></i>Galeria</a>
+                </div>
+
+                
+            </nav>
+
+            
+        </div>
+        </header>
+  
+       <section class="jumbotron jumbotron1">
+        <div class="container">
+            <h1 class="titulo-blog">Mis Perris</h1>
+            <p>Somos una fundación protectora de animales legalmente constituida en Santiago de Chile, que surge de la necesidad de proteger a animales domésticos en situación de maltrato o abandono, y busca desarrollar una cultura de protección activa de la vida animal. </p>
+        </div>
+        <div >
+            <center>
+            <img src="{% static 'img/facebook.png'  %}" class="imgperro">
+            <img src="{% static 'img/flickr.png'  %}" class="imgperro">
+            <img src="{% static 'img/google+.png'  %}" class="imgperro">
+            <img src="{% static 'img/forrst.png'  %}" class="imgperro">
+            <img src="{% static 'img/rss.png'  %}" class="imgperro">
+            <img src="{% static 'img/share-this.png'  %}" class="imgperro">
+            <img src="{% static 'img/skype.png'  %}" class="imgperro">
+            <img src="{% static 'img/twitter.png'  %}" class="imgperro">
+            <img src="{% static 'img/vimeo.png'  %}" class="imgperro">
+            <img src="{% static 'img/you_tube.png'  %}" class="imgperro">
+        </center>
+
+        
+        </div>
+
+
+        </section>
+        <section class="main container">
+                <div class="row ">
+        <section class="posts col-md-9">
+                <article class="post clearfix">
+                    <a href="#" class="thumb pull-left"></a>
+                        <div class="col-md-12 text-center">
+                     <img src="{% static 'img/perro.png'  %}" style="margin: auto;" class ="img-responsive imgperro" alt="">
+                        </div>
+                     </a>
+
+                     <h2 class="post-title">
+                         <a href="#">
+
+                         </a>
+                     </h2>
+                     <p><span class="post-fecha">13 de Septiembre de 2018</span> por <span class="post-autor"><a href="#">Ignacio Gonzalez</a></span></p>
+                </article>
+                </section>
+            </section>
+
+            
+       </section>
+        {% block content %}
+       <section class="jumbotron ">
+        <div class="container">
+            <h1 class="titulo-blog">Rescate</h1>            
+            <p >ETAPA UNO</p>
+            <p>Rescatamos perros en situacion de peligro y/o abandono. Los rehabilitamos y los preparamos para buscarles un hogar.</p>
+            <a href="#" class="thumb pull-left"></a>
+            <div class="col-sx-12 text-center">
+            <img src="{% static 'img/rescate.jpg'  %}" style="margin: auto;" class ="img-responsive imgrescate" alt="">
+            <hr>
+            <h3 >CROWDFUNDING</h3>  
+            <p >FINANCIAMIENTO</p>
+            <img src="{% static 'img/crowfunding.jpg '  %}"style="margin: auto;" class ="img-responsive imgrescate" alt="">
+            <p>Sigue nuestras redes sociales para informarte acerca de las diversas campañas y actividades que realizamos para obtener financiamiento para seguir adelante</p>
+            </div>
+            </a>
+        </div>
+        
+        <br>
+        <h1 class="titulo-blog">Perritos</h1> 
+
+        <div class="row center-sm">
+                <div class="carousel-demo">
+                    <script>
+                        var slides = [
+                            { src: "{% static 'img/1.jpg '  %}" },
+                            { src: "{% static 'img/2.jpg '  %}" },
+                            { src: "{% static 'img/3.jpg '  %}" },
+                            { src: "{% static 'img/4.jpg '  %}" },
+                            { src: "{% static 'img/5.jpg '  %}" },
+                            { src: "{% static 'img/6.jpg '  %}" },
+                            { src: "{% static 'img/7.jpg '  %}" },
+                            { src: "{% static 'img/4.jpg '  %}" }
+                        ];
+        
+                        $('.carousel-demo').jR3DCarousel({
+                            width: 600,
+                            height: 450,
+                            slides: slides,
+                            animation: "slide3D"
+                        });
+                    </script>
+        
+        
+                </div>
+        
+            </div>
+
+        
+
+            
+
+
+    </section>
+    {% endblock %}
+
+        <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/headroom.min.js' %}"></script>
+        <script src="{% static 'js/menu.js' %}"></script>
+
+
+
+        
+    </body>
+</html>

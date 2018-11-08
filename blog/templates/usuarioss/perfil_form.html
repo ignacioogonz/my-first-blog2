@@ -1,0 +1,14 @@
+{% extends 'blog/post_list.html' %}
+{% load staticfiles %}
+
+
+{% block title %}Registrate{% endblock %}
+
+{% block content %}
+<Link rel="stylesheet" href="{% static 'Formulario/css/estilo.css' %}">
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" name="submit">
+    </form>    
+{% endblock content %}

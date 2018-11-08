@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Galeria de Mascotas</title>
+	<script src="js/jquery-latest.js"></script>
+	<script src="js/masonry.pkgd.js"></script>
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+        <h1 class ="titulo" >Galeria de mascotas rescatadas</h1>
+	<div class="contenedor">
+
+		<div class="elemento">
+			<img src="img/imagen1.jpg" alt="">
+			<p>Nombre: Cachupin
+                "Es un pequeño perrito jugueton que le gusta comer helado"
+            </p>
+		</div>
+		<div class="elemento">
+            <img src="img/imagen2.jpg" alt="">
+            <p>Nombre: Juan
+                "Es un pequeño perrito jugueton que muestra mucha felicidad"
+            </p>
+		</div>
+		<div class="elemento">
+            <img src="img/imagen3.jpg" alt="">
+            <p>Nombre: Jhonny
+                "Es un pequeño perrito jugueton que le gusta estar a la moda"
+            </p>
+        </div>
+		<div class="elemento">
+            <img src="img/imagen4.jpg" alt="">
+            <p>Nombre: Jhonny
+                "Es un pequeño perrito negro que le gusta jugar"
+            </p>
+        </div>
+		<div class="elemento">
+			<img src="img/imagen5.jpg" alt="">
+            <p>Nombre: Rocky
+                "Es un pequeño perrito que le gusta estar disfrazado"
+            </p>
+        </div>
+		<div class="elemento">
+			<img src="img/imagen6.jpg" alt="">
+            <p>Nombre: Chilindrina
+                "Es un pequeño perrito que le gusta tener el pelo lindo"
+            </p>
+        </div>
+		<div class="elemento">
+			<img src="img/imagen7.jpg" alt="">
+            <p>Nombre: Elvis
+                "Es un pequeño perrito que le gusta reir para que le den comida"
+            </p>
+        </div>
+		<div class="elemento">
+			<img src="img/imagen8.jpg" alt="">
+            <p>Nombre: Elvis
+                "Es un pequeño gatito que le gusta el agua"
+            </p>
+        </div>
+		<div class="elemento">
+			<img src="img/imagen9.jpg" alt="">
+            <p>Nombre: Gatiti
+                "Es un pequeño gatito que le gusta dormir"
+            </p>
+        </div>
+		<div class="elemento">
+			<img src="img/imagen10.jpg" alt="">
+            <p>Nombre: Gatiti
+                "Es un pequeño gatito que le gusta comer"
+            </p>
+        </div>
+	</div>
+
+	<script>
+		var container = document.querySelector('.contenedor');
+		var msnry = new Masonry( container, {
+		  // options
+		  itemSelector: '.elemento'
+		});
+	</script>
+</body>
+</html>

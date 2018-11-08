@@ -1,0 +1,58 @@
+
+{% load staticfiles %}
+<!DOCTYPE html>
+<Html lang="es">
+<head>
+    <title>Formulario MisPerris</title>
+    <Meta charset="UTF-8">
+    <script rel="stylesheet" src="{% static 'jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'Formulario/js/Java.js' %}"></script>
+    <Link rel="stylesheet" href="{% static 'Formulario/css/estilo.css' %}">
+
+</head>
+<body>
+    {% block content %}
+    {% csrf_token %}
+    <form name="formulario1" method="" action="">
+    <h2>Contacto</h2>
+    <input type="email" name="correo" placeholder="Correo electrónico" required="required">
+    <input type="text" name="rut" oninput="checkRut(this)" placeholder="Rut" required="required">
+    <input type="text" name="nombre" class="soloLetras" placeholder="Nombre Completo" required="required">
+    <p class="fecha">Fecha de Nacimiento</p>
+    <input type="date" max="2001-12-31" name="fecha" placeholder="Fecha de Nacimiento" required="required">
+    <input type="text" name="telefono" class="soloNumero" placeholder="Teléfono de contacto" required="required" >
+    <select multiple class="seleccion" name="cosa"  onchange="cambia()" >
+         <option disabled selected>Seleccione una Región</option>
+         <option value="1">Arica y Parinacota</option>
+         <option value="2">Tarapacá</option>
+         <option value="3">Antofagasta</option>
+         <option value="4">Atacama</option>
+         <option value="5">Coquimbo</option>
+         <option value="6">Valparaíso</option>
+         <option value="7">Libertador General Bernardo O'Higgins</option>
+         <option value="8">Maule</option>
+         <option value="9">Biobío</option>
+         <option value="10">Araucanía</option>
+         <option value="11">Los Ríos</option>
+         <option value="12">Los Lagos</option>
+         <option value="13">Aysén del General Carlos Ibáñez del Campo</option>
+         <option value="14">Magallanes y de la Antártica Chilena</option>
+         <option value="15">Metropolitana de Santiago</option>
+    </select> 
+    
+    <select class="seleccion" name="opt" >
+        <option value="-">Seleccione una ciudad
+    </select>
+
+    
+   
+    <textarea name="Escriba " placeholder="Escriba un mensaje" ></textarea>
+
+    <input type="submit" value="Enviar" id="boton">
+        
+</form>
+{% endblock %}
+
+</body>
+
+</Html>
